@@ -4,7 +4,9 @@ import './index.css'
 import App from './App.tsx'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import LoginPage from './components/Login.tsx'
-import SignUpPage from './components/SignUp.tsx'
+
+import SignUpPage from './components/Sign-up.tsx'
+
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
