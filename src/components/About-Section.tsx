@@ -1,86 +1,92 @@
-import { Link } from "react-router-dom";
 import { HiCheck } from "react-icons/hi";
-import aboutImg from "../../public/about.avif";
-import { AboutValues, achievements } from "../constant/about-values";
-
+import aboutImage from "../../public/insurence.jpg";
 const AboutSection = () => {
+  const insuranceTypes = [
+    "Health Insurance",
+    "Education Insurance",
+    "Auto Insurance",
+    "Home Insurance",
+  ];
+
   return (
     <section className="py-16 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-16">
-          <div className="space-y-8">
-            <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-              Who we Are
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="flex items-center justify-center order-2 lg:order-1">
+            <img src={aboutImage} className="rounded-md h-full" alt="" />
+          </div>
+
+          <div className="space-y-8 order-1 lg:order-2">
+            <div className="inline-flex items-center gap-2 bg-teal-600 text-white px-4 py-2 rounded-lg text-sm font-medium">
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fillRule="evenodd"
+                  d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              About Us
             </div>
 
-            <h2 className="text-2xl md:text-xl lg:text-4xl font-bold text-gray-900 leading-tight">
-              We work with a wide range of quality, reliable{" "}
-              <span className="bg-yellow-200 px-2 py-1 rounded">
-                insurance companies
-              </span>
-              .
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+              Our staff has been working in the industry for{" "}
+              <span className="bg-yellow-200">many years</span>.
             </h2>
 
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Most of us know our driving record affects our car insurance
-              rates. But, do you know that your region and even your
-              neighborhood can influence it too?
-            </p>
+            <div className="space-y-4">
+              <p className="text-gray-600 text-lg leading-relaxed">
+                Most of us know our driving record affects our car insurance
+                rates. But, do you know that your region and even your
+                neighborhood impacts your home, business, and car insurance
+                rates Marin County.
+              </p>
+
+              <p className="text-gray-600 text-lg leading-relaxed">
+                Our staff has been working in the industry for many years. We
+                offer guidance and help you make the right decisions for
+                yourself.
+              </p>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {achievements.map((achievement, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <HiCheck className="text-green-600 text-xl" />
+              {insuranceTypes.map((type, index) => (
+                <div key={index} className="flex items-center gap-3">
+                  <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg
+                      className="w-4 h-4 text-green-600"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
                   </div>
-                  <p className="text-gray-600 text-m leading-relaxed">
-                    {achievement}
-                  </p>
+                  <span className="text-gray-700 font-medium">{type}</span>
                 </div>
               ))}
             </div>
 
-            <div className="pt-4">
-              <Link
-                to="/quote"
-                className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center gap-2 w-fit"
-              >
-                Request a Quote
-                <div className="w-6 h-6  rounded-full flex items-center justify-center">
-                  <HiCheck />
-                </div>
-              </Link>
-            </div>
-          </div>
-
-          <div className="flex items-center justify-center">
-            <div className="relative w-full max-w-lg">
-              <div className="absolute inset-0 bg-gray-100 rounded-full"></div>
-
-              <div className="relative z-10 p-8 flex items-center justify-center">
-                <div className="w-full  rounded-2xl flex items-center justify-center relative overflow-hidden">
-                  <div className="text-center">
-                    <img src={aboutImg} width={1000} />
-                  </div>
-                </div>
+            
+            <div className="flex items-center gap-4 ">
+              <div className="w-12 h-12 bg-teal-600 text-white rounded-full flex items-center justify-center">
+                <HiCheck/>
+              </div>
+              <div>
+                <p className="text-gray-500 text-sm">Call Anytime</p>
+                <p className="text-gray-900 text-xl font-bold">
+                  <a
+                    href="tel:496-525-9376"
+                    className="hover:text-teal-600 transition-colors"
+                  >
+                    496-525-9376
+                  </a>
+                </p>
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {AboutValues.map((value, index) => (
-            <div key={index} className="text-center space-y-4 shadow-2xl p-2">
-              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto">
-                {value.icon}
-              </div>
-              <h3 className="text-xl font-bold text-gray-900">{value.title}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed mb-2">
-                {value.description}
-              </p>
-            </div>
-          ))}
         </div>
       </div>
     </section>

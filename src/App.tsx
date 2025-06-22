@@ -5,6 +5,8 @@ import Footer from "./components/Footer";
 import HeroSection from "./components/Hero-Section";
 import Navbar from "./components/Navbar";
 import PricingTable from "./components/Pricing-table";
+import ServiceSection from "./components/Service-Section";
+
 
 function App() {
   return (
@@ -14,7 +16,8 @@ function App() {
       {/* Main content goes here */}
       <main className="flex-1">
         <HeroSection/>
-        <AboutSection/>
+       <AboutSection/>
+       <ServiceSection/>
         <PricingTable />
         <ContactSection />
       </main>
