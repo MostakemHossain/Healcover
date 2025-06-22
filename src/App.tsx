@@ -1,6 +1,7 @@
 import "./App.css";
 import AboutSection from "./components/About-Section";
 import ContactSection from "./components/Contact-section";
+import FAQSection from "./components/Faq";
 import Footer from "./components/Footer";
 import HeroSection from "./components/Hero-Section";
 import Navbar from "./components/Navbar";
@@ -19,6 +20,7 @@ function App() {
         <AboutSection />
         <Service/>
         <ServiceSection />
+        <FAQSection/>
         <PricingTable />
         <ContactSection />
       </main>
