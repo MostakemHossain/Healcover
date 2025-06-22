@@ -6,8 +6,8 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full  sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="w-full max-w-7xl mx-auto sticky top-0 z-50 bg-white backdrop-blur-sm transition duration-300">
+      <div>
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
             <Link
@@ -106,7 +106,7 @@ const Navbar = () => {
             <div className="pt-2">
               <Link
                 to="/quote"
-                className="bg-teal-600 hover:bg-teal-700 text-white block px-3 py-2 text-base font-medium transition-colors duration-200 rounded-md text-center flex items-center justify-center gap-2"
+                className="bg-teal-600 hover:bg-teal-700 text-white  px-3 py-2 text-base font-medium transition-colors duration-200 rounded-md text-center flex items-center justify-center gap-2"
                 onClick={() => setIsOpen(false)}
               >
                 Get a Quote
