@@ -47,14 +47,14 @@ const Footer = () => {
       </div>
 
       <div className="bg-gray-900 text-white md:pt-[250px] pt-10 pb-16 relative z-10">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto p-2">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="lg:col-span-1">
               <div className="flex items-center gap-2 mb-6">
                 <div className="w-8 h-8 rounded-full flex items-center justify-center">
                   🏥
                 </div>
-                <span className="text-xl font-bold">Heal Nexus</span>
+                <span className="text-3xl text-teal-500 font-bold">Heal Nexus</span>
               </div>
               <p className="text-gray-400 mb-6 leading-relaxed">
                 Working with a life coach is like ensure hanging out with a

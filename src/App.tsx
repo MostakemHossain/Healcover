@@ -1,5 +1,6 @@
 
 import './App.css'
+import ContactSection from './components/Contact-section'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 
@@ -12,6 +13,7 @@ function App() {
     
     {/* Main content goes here */}
     <main className="flex-1">
+      <ContactSection/>
      
     </main>
 
