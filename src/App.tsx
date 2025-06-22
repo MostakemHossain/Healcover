@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import PricingTable from "./components/Pricing-table";
 import Service from "./components/Service";
 import ServiceSection from "./components/Service-Section";
+import TestimonialsSection from "./components/Testimonial";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <ServiceSection />
         <FAQSection/>
         <PricingTable />
+        <TestimonialsSection/>
         <ContactSection />
       </main>
 
