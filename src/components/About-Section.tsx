@@ -9,7 +9,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section className="py-16 px-4 bg-white">
+    <section id="about" className="py-16 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="flex items-center justify-center order-2 lg:order-1">
