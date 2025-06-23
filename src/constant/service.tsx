@@ -12,7 +12,7 @@ export const services = [
     description:
       "Protect your home and belongings with comprehensive coverage. Our home insurance policies cover property damage, theft, liability, and additional living expenses.",
     image: "/home.jpg",
-    link: "/services/home",
+    link: "/services/1",
     category: "property",
     features: [
       "Property Coverage",
@@ -29,7 +29,7 @@ export const services = [
     description:
       "Drive with confidence knowing you're protected. Our auto insurance offers comprehensive coverage for accidents, theft, and liability with competitive rates.",
     image: "/auto.png",
-    link: "/services/auto",
+    link: "/services/2",
     category: "vehicle",
     features: [
       "Collision Coverage",
@@ -46,7 +46,7 @@ export const services = [
     description:
       "Secure your health and financial well-being with our comprehensive health insurance plans. Coverage for medical expenses, prescriptions, and preventive care.",
     image: "/health.jpg",
-    link: "/services/health",
+    link: "/services/3",
     category: "health",
     features: [
       "Medical Coverage",
@@ -63,7 +63,7 @@ export const services = [
     description:
       "Protect your business from unexpected risks. Our business insurance covers property, liability, workers' compensation, and business interruption.",
     image: "/business.jpg",
-    link: "/services/business",
+    link: "/services/4",
     category: "business",
     features: [
       "General Liability",
@@ -80,7 +80,7 @@ export const services = [
     description:
       "Provide financial security for your loved ones. Our life insurance policies offer term and whole life options to meet your family's needs.",
     image: "/life.png",
-    link: "/services/life",
+    link: "/services/5",
     category: "life",
     features: [
       "Term Life Options",
@@ -97,7 +97,7 @@ export const services = [
     description:
       "Travel worry-free with comprehensive travel insurance. Coverage for trip cancellation, medical emergencies, and lost luggage worldwide.",
     image: "/travel.jpeg",
-    link: "/services/travel",
+    link: "/services/6",
     category: "specialty",
     features: [
       "Trip Cancellation",
@@ -114,7 +114,7 @@ export const services = [
     description:
       "Comprehensive protection for your real estate investments. Coverage for rental properties, commercial buildings, and vacant land.",
     image: "/property.jpg",
-    link: "/services/property",
+    link: "/services/7",
     category: "property",
     features: [
       "Rental Property",
@@ -131,7 +131,7 @@ export const services = [
     description:
       "Protect your income if you become unable to work. Our disability insurance provides financial support during recovery periods.",
     image: "../../public/disability.webp",
-    link: "/services/disability",
+    link: "/services/8",
     category: "health",
     features: [
       "Short-term Disability",
