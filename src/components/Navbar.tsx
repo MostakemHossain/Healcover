@@ -21,14 +21,14 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <Link
+              <a
                 key={link.name}
-                to={link.href}
+                href={link.href}
                 className="text-gray-700 hover:text-teal-600 px-3 py-2 text-sm font-bold transition-colors duration-200 relative group"
               >
                 {link.name}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-600 transition-all duration-200 group-hover:w-full"></span>
-              </Link>
+              </a>
             ))}
           </div>
 

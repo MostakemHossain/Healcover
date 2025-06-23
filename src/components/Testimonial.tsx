@@ -25,7 +25,7 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section className="py-16 px-4 bg-gradient-to-br from-green-400 to-green-500">
+    <section id="testimonial" className="py-16 px-4 bg-gradient-to-br from-green-400 to-green-500">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-12">
           <div className="mb-6 lg:mb-0">
