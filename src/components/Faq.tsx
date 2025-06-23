@@ -1,10 +1,17 @@
-import faqImage from "../../public/faq.png";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+import faqImage from "../../public/faq.png";
 import { faqs } from "../constant/faqs";
 
 const FAQSection = () => {
   const [openAccordion, setOpenAccordion] = useState<number | null>(1);
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: false, easing: "ease-in-out" });
+  }, []);
 
   const toggleAccordion = (index: number) => {
     setOpenAccordion(openAccordion === index ? null : index);
@@ -14,17 +21,24 @@ const FAQSection = () => {
     <section className="py-16 px-4 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div className="flex items-center justify-center order-2 lg:order-1">
-            <img src={faqImage} />
+         
+          <div
+            className="flex items-center justify-center order-2 lg:order-1"
+            data-aos="fade-left"
+          >
+            <img src={faqImage} alt="FAQ Illustration" />
           </div>
 
-          <div className="space-y-8 order-1 lg:order-2">
+          
+          <div
+            className="space-y-8 order-1 lg:order-2"
+            data-aos="fade-right"
+          >
             <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
               <div className="w-2 h-2 bg-green-500 rounded-full"></div>
               Service Benefit
             </div>
 
-            {/* Main Heading */}
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
               We hope you are{" "}
               <span className="bg-yellow-200 px-2 py-1 rounded">
@@ -33,7 +47,6 @@ const FAQSection = () => {
               and well during this Any time
             </h2>
 
-            {/* Subtitle */}
             <p className="text-gray-600 text-lg leading-relaxed">
               We hope you are staying safe and well during this for a ready
               ensure unprecedented time. At this time, online auto.
@@ -44,6 +57,8 @@ const FAQSection = () => {
                 <div
                   key={index}
                   className="border border-gray-200 rounded-lg overflow-hidden"
+                  data-aos="fade-up"
+                  data-aos-delay={index * 150}
                 >
                   <button
                     onClick={() => toggleAccordion(index)}
@@ -89,6 +104,4 @@ const FAQSection = () => {
   );
 };
 
-
 export default FAQSection;
-

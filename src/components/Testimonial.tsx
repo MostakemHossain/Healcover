@@ -1,12 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { testimonials } from "../constant/testimonials";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const TestimonialsSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const itemsPerSlide = 3;
   const totalSlides = Math.ceil(testimonials.length / itemsPerSlide);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-out-cubic",
+      once: false,
+    });
+  }, []);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % totalSlides);
@@ -25,9 +35,16 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section id="testimonial" className="py-16 px-4 bg-gradient-to-br from-green-400 to-green-500">
+    <section
+      id="testimonial"
+      className="py-16 px-4 bg-gradient-to-br from-green-400 to-green-500"
+    >
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-12">
+        
+        <div
+          className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-12"
+          data-aos="fade-down"
+        >
           <div className="mb-6 lg:mb-0">
             <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <div className="w-2 h-2 bg-green-500 rounded-full"></div>
@@ -40,7 +57,7 @@ const TestimonialsSection = () => {
             </h2>
           </div>
 
-          <div className="flex gap-2">
+          <div className="flex gap-2" data-aos="fade-up" data-aos-delay={300}>
             <button
               onClick={prevSlide}
               className="w-12 h-12 bg-teal-600 hover:bg-teal-700 text-white rounded-lg flex items-center justify-center transition-colors duration-200"
@@ -58,6 +75,7 @@ const TestimonialsSection = () => {
           </div>
         </div>
 
+        {/* Slides container */}
         <div className="relative overflow-hidden">
           <div
             className="flex transition-transform duration-500 ease-in-out"
@@ -79,6 +97,8 @@ const TestimonialsSection = () => {
                             ? "bg-teal-600 text-white"
                             : "bg-white text-gray-900"
                         }`}
+                        data-aos="fade-up"
+                        data-aos-delay={index * 150}
                       >
                         <div className="absolute -top-1 z-20 m-2 left-8">
                           <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-white shadow-lg">
@@ -133,6 +153,7 @@ const TestimonialsSection = () => {
           </div>
         </div>
 
+        {/* Pagination dots */}
         <div className="flex justify-center gap-2 mt-8">
           {Array.from({ length: totalSlides }, (_, index) => (
             <button

@@ -1,5 +1,8 @@
 import { BsArrowRight } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Service = () => {
   const services = [
@@ -33,10 +36,22 @@ const Service = () => {
     },
   ];
 
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: "ease-out-cubic",
+      once: false,
+    });
+  }, []);
+
   return (
     <section id="services" className="py-16 px-4 bg-gray-100">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-12">
+        {/* Header Section */}
+        <div
+          className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-12"
+          data-aos="fade-down"
+        >
           <div className="mb-6 lg:mb-0">
             <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <div className="w-2 h-2 bg-green-500 rounded-full"></div>
@@ -56,18 +71,21 @@ const Service = () => {
               className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center gap-2"
             >
               View More Services
-              <div className="w-6 h-6  rounded-full flex items-center justify-center">
+              <div className="w-6 h-6 rounded-full flex items-center justify-center">
                 <BsArrowRight />
               </div>
             </Link>
           </div>
         </div>
 
+        {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <div
               key={index}
-              className="rounded-2xl p-6  hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
+              className="rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
+              data-aos="fade-up"
+              data-aos-delay={index * 150}
             >
               <div className="mb-6 w-full h-32 flex items-center justify-center rounded-xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
                 <img
