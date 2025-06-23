@@ -8,28 +8,28 @@ const Service = () => {
       description:
         "Our staff has been working in the industry for many years. We offer guidance and help you make the right decisions",
       image: "../../public/home.jpg",
-      link: "/services/home",
+      link: "/services/1",
     },
     {
       title: "Auto Insurance",
       description:
         "Our staff has been working in the industry for many years. We offer guidance and help you make the right decisions",
       image: "../../public/auto.png",
-      link: "/services/auto",
+      link: "/services/2",
     },
     {
       title: "Health Insurance",
       description:
         "Our staff has been working in the industry for many years. We offer guidance and help you make the right decisions",
       image: "../../public/health.jpg",
-      link: "/services/health",
+      link: "/services/3",
     },
     {
       title: "Business Insurance",
       description:
         "Our staff has been working in the industry for many years. We offer guidance and help you make the right decisions",
       image: "../../public/business.jpg",
-      link: "/services/business",
+      link: "/services/4",
     },
   ];
 
