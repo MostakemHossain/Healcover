@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import LoginPage from './components/Login.tsx'
 
 import SignUpPage from './components/Sign-up.tsx'
+import NotFoundPage from './components/NotFound.tsx'
 
 
 createRoot(document.getElementById('root')!).render(
@@ -15,6 +16,8 @@ createRoot(document.getElementById('root')!).render(
       <Route path="/" element={<App />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<SignUpPage />} />
+      <Route path="*" element={<NotFoundPage />} />       
+
     </Routes>
     </BrowserRouter>
   </StrictMode>,
